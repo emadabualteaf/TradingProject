@@ -115,6 +115,15 @@ const LoginScreen = ({ navigation }) => {
                             </Text>
                         </Pressable>
 
+                        <Pressable
+                            style={[styles.demoButton, { borderColor: theme.colors.border }]}
+                            onPress={() => login({ _id: 'demo', name: 'Demo User', email: 'demo@test.com' }, 'demo-token')}
+                        >
+                            <Text style={{ color: theme.colors.textSecondary, fontSize: 14 }}>
+                                Skip — Demo Mode
+                            </Text>
+                        </Pressable>
+
                     </View>
                 </TouchableWithoutFeedback>
             </KeyboardAvoidingView>
@@ -180,6 +189,13 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 14,
         marginTop: 10,
+    },
+    demoButton: {
+        paddingVertical: 12,
+        borderRadius: 10,
+        alignItems: 'center',
+        borderWidth: 1,
+        marginTop: 6,
     }
 })
 
