@@ -1,8 +1,9 @@
+import { SafeAreaView } from 'react-native-safe-area-context'
 import React, { useState } from 'react'
 import {
     View, Text, TextInput, Pressable, StyleSheet,
     KeyboardAvoidingView, Platform, TouchableWithoutFeedback,
-    Keyboard, Alert, SafeAreaView, ScrollView, ActivityIndicator
+    Keyboard, Alert, ScrollView, ActivityIndicator
 } from 'react-native'
 import axios from 'axios'
 import { useTheme } from '../../context/ThemeContext'

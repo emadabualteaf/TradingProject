@@ -1,8 +1,9 @@
+import { SafeAreaView } from 'react-native-safe-area-context'
 import React, { useState } from 'react'
 import {
     View, Text, TextInput, Pressable, StyleSheet,
     KeyboardAvoidingView, Platform, TouchableWithoutFeedback,
-    Keyboard, Alert, SafeAreaView, ActivityIndicator
+    Keyboard, Alert, ActivityIndicator
 } from 'react-native'
 import axios from 'axios'
 import { useAuth } from '../../context/AuthContext'

@@ -1,7 +1,8 @@
+import { SafeAreaView } from 'react-native-safe-area-context'
 import React, { useState } from 'react'
 import {
     View, Text, StyleSheet, FlatList,
-    TextInput, Pressable, SafeAreaView,
+    TextInput, Pressable,
     StatusBar, RefreshControl
 } from 'react-native'
 import { useRouter } from 'expo-router'

@@ -1,7 +1,8 @@
+import { SafeAreaView } from 'react-native-safe-area-context'
 import React from 'react'
 import {
     View, Text, StyleSheet, FlatList,
-    SafeAreaView, StatusBar, Pressable
+    StatusBar, Pressable
 } from 'react-native'
 import { useRouter } from 'expo-router'
 import { Ionicons } from '@expo/vector-icons'

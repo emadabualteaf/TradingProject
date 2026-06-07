@@ -1,7 +1,8 @@
+import { SafeAreaView } from 'react-native-safe-area-context'
 import React from 'react'
 import {
     View, Text, StyleSheet, FlatList,
-    SafeAreaView, StatusBar, Pressable
+    StatusBar, Pressable
 } from 'react-native'
 import { useAuth } from '../../context/AuthContext'
 import { useTheme } from '../../context/ThemeContext'

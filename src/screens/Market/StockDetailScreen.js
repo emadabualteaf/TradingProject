@@ -1,6 +1,7 @@
+import { SafeAreaView } from 'react-native-safe-area-context'
 import React from 'react'
 import {
-    View, Text, StyleSheet, SafeAreaView,
+    View, Text, StyleSheet,
     StatusBar, Pressable, ScrollView, Alert
 } from 'react-native'
 import { useLocalSearchParams, useRouter } from 'expo-router'
