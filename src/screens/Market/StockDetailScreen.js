@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
     View, Text, StyleSheet, SafeAreaView,
     StatusBar, Pressable, ScrollView, Alert
@@ -6,13 +6,15 @@ import {
 import { useLocalSearchParams, useRouter } from 'expo-router'
 import { Ionicons } from '@expo/vector-icons'
 import { useTheme } from '../../context/ThemeContext'
+import { useWatchlist } from '../../context/WatchlistContext'
 import { allStocks } from '../../utils/mockData'
 
 const StockDetailScreen = () => {
     const { symbol } = useLocalSearchParams()
     const { theme } = useTheme()
     const router = useRouter()
-    const [inWatchlist, setInWatchlist] = useState(false)
+    const { addToWatchlist, removeFromWatchlist, isInWatchlist } = useWatchlist()
+    const inWatchlist = isInWatchlist(symbol)
 
     const stock = allStocks.find((s) => s.symbol === symbol)
 
@@ -27,11 +29,13 @@ const StockDetailScreen = () => {
     const isProfit = stock.change >= 0
 
     const toggleWatchlist = () => {
-        setInWatchlist(!inWatchlist)
-        Alert.alert(
-            inWatchlist ? 'Removed' : 'Added',
-            `${stock.symbol} ${inWatchlist ? 'removed from' : 'added to'} your watchlist`
-        )
+        if (inWatchlist) {
+            removeFromWatchlist(stock.symbol)
+            Alert.alert('Removed', `${stock.symbol} removed from your watchlist`)
+        } else {
+            addToWatchlist(stock)
+            Alert.alert('Added', `${stock.symbol} added to your watchlist`)
+        }
     }
 
     const StatRow = ({ label, value }) => (
