@@ -1,0 +1,17 @@
+export const allStocks = [
+    { id: '1',  symbol: 'AAPL',  name: 'Apple Inc.',          price: 189.45, change: 1.23,  volume: '58.3M', marketCap: '2.94T', high52: 198.23, low52: 143.90 },
+    { id: '2',  symbol: 'TSLA',  name: 'Tesla Inc.',           price: 245.67, change: -2.15, volume: '112.1M',marketCap: '781B',  high52: 299.29, low52: 138.80 },
+    { id: '3',  symbol: 'GOOGL', name: 'Alphabet Inc.',        price: 142.89, change: 0.87,  volume: '21.4M', marketCap: '1.78T', high52: 153.78, low52: 115.83 },
+    { id: '4',  symbol: 'MSFT',  name: 'Microsoft Corp.',      price: 378.92, change: 1.54,  volume: '19.8M', marketCap: '2.81T', high52: 420.82, low52: 309.45 },
+    { id: '5',  symbol: 'AMZN',  name: 'Amazon.com',           price: 185.23, change: -0.43, volume: '43.7M', marketCap: '1.93T', high52: 201.20, low52: 151.61 },
+    { id: '6',  symbol: 'NVDA',  name: 'NVIDIA Corp.',         price: 875.40, change: 3.21,  volume: '41.2M', marketCap: '2.16T', high52: 974.00, low52: 405.04 },
+    { id: '7',  symbol: 'META',  name: 'Meta Platforms',       price: 501.30, change: -1.08, volume: '14.5M', marketCap: '1.27T', high52: 531.49, low52: 279.40 },
+    { id: '8',  symbol: 'NFLX',  name: 'Netflix Inc.',         price: 628.75, change: 2.45,  volume: '5.2M',  marketCap: '269B',  high52: 700.00, low52: 344.73 },
+    { id: '9',  symbol: 'AMD',   name: 'Advanced Micro Dev.',  price: 162.33, change: -0.76, volume: '48.9M', marketCap: '263B',  high52: 227.30, low52: 134.45 },
+    { id: '10', symbol: 'DIS',   name: 'Walt Disney Co.',      price: 98.14,  change: 0.52,  volume: '11.3M', marketCap: '179B',  high52: 123.74, low52: 83.91  },
+    { id: '11', symbol: 'PYPL',  name: 'PayPal Holdings',      price: 62.88,  change: -1.34, volume: '16.7M', marketCap: '67B',   high52: 90.20,  low52: 50.25  },
+    { id: '12', symbol: 'INTC',  name: 'Intel Corp.',          price: 30.45,  change: 1.10,  volume: '34.2M', marketCap: '129B',  high52: 51.28,  low52: 18.84  },
+    { id: '13', symbol: 'UBER',  name: 'Uber Technologies',    price: 74.22,  change: 2.88,  volume: '22.1M', marketCap: '155B',  high52: 87.00,  low52: 55.22  },
+    { id: '14', symbol: 'COIN',  name: 'Coinbase Global',      price: 225.60, change: -3.42, volume: '9.8M',  marketCap: '57B',   high52: 283.41, low52: 115.65 },
+    { id: '15', symbol: 'SPOT',  name: 'Spotify Technology',   price: 312.50, change: 1.75,  volume: '3.4M',  marketCap: '63B',   high52: 356.80, low52: 167.42 },
+]
