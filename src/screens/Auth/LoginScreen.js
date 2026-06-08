@@ -5,11 +5,9 @@ import {
     KeyboardAvoidingView, Platform, TouchableWithoutFeedback,
     Keyboard, Alert, ActivityIndicator
 } from 'react-native'
-import axios from 'axios'
 import { useAuth } from '../../context/AuthContext'
 import { useTheme } from '../../context/ThemeContext'
-
-const BASE_URL = 'http://10.0.2.2:3000'
+import api from '../../services/api'
 
 const LoginScreen = ({ navigation }) => {
     const { login } = useAuth()
@@ -33,7 +31,7 @@ const LoginScreen = ({ navigation }) => {
             return
         }
         setLoading(true)
-        axios.post(`${BASE_URL}/login`, form)
+        api.login(form.email, form.password)
             .then((res) => {
                 login(res.data.user, res.data.token)
             })

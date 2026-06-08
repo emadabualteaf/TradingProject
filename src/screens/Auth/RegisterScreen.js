@@ -5,10 +5,8 @@ import {
     KeyboardAvoidingView, Platform, TouchableWithoutFeedback,
     Keyboard, Alert, ScrollView, ActivityIndicator
 } from 'react-native'
-import axios from 'axios'
 import { useTheme } from '../../context/ThemeContext'
-
-const BASE_URL = 'http://10.0.2.2:3000'
+import api from '../../services/api'
 
 const RegisterScreen = ({ navigation }) => {
     const { theme } = useTheme()
@@ -41,11 +39,7 @@ const RegisterScreen = ({ navigation }) => {
             return
         }
         setLoading(true)
-        axios.post(`${BASE_URL}/register`, {
-            name: form.name,
-            email: form.email,
-            password: form.password
-        })
+        api.register(form.name, form.email, form.password)
             .then(() => {
                 Alert.alert('Success', 'Account created! Please log in.')
                 navigation.navigate('Login')
