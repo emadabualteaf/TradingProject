@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 // Change this IP to your computer's local IP when running the backend
-const BASE_URL = 'http://10.0.2.2:3000'
+const BASE_URL = 'http://10.69.2.34:3000'
 
 const api = axios.create({
     baseURL: BASE_URL,
